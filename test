@@ -1,0 +1,46 @@
+<?php
+
+use ERP\Test;
+
+require __DIR__ .'/vendor/autoload.php';
+
+$listFilesByExtension = function ($directory, $extension) {
+
+    $files = [];
+    $dir = new RecursiveDirectoryIterator($directory);
+    $iterator = new RecursiveIteratorIterator($dir);
+
+    foreach ($iterator as $file) {
+        if ($file->isFile() && strpos($file->getPathname(), $extension) !== false) {
+            $files[] = $file->getPathname();
+        }
+    }
+
+    return $files;
+};
+
+$run = function (?string $testTag, ?string $specificTest) use ($listFilesByExtension) {
+    try {
+
+        $rootDirectory = getcwd();
+        $extension = $testTag != null ? ('.' . $testTag . '.test.php') : '.test.php';
+
+        $files = $listFilesByExtension($rootDirectory, $extension);
+
+        foreach ($files as $file) {
+            if ($specificTest != null && strpos($file, DIRECTORY_SEPARATOR . $specificTest) == false) continue;
+            try {
+                require($file);
+                echo "\n";
+            } catch (\Throwable $th) {
+                Test::logError("\n erro: " . $th->getCode() . " - " . $th->getMessage() . ' - ' . $th->getFile() . ' - ' . $th->getLine() . "\n");
+            }
+        }
+    } catch (\Throwable $th) {
+        Test::logError("\n erro: " . $th->getCode() . " - " . $th->getMessage() . ' - ' . $th->getFile() . ' - ' . $th->getLine() . "\n");
+    }
+};
+
+$arg01 = $argv[1] ?? null;
+$arg02 = $argv[2] ?? null;
+$run($arg01, $arg02);
