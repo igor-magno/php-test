@@ -2,6 +2,8 @@
 
 use ERP\Test;
 
+$autoload = __DIR__ .'/vendor/autoload.php';
+
 if (file_exists($autoload)) {
     require $autoload;
 } else {
