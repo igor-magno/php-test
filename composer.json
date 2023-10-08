@@ -13,5 +13,8 @@
             "ERP\\": "src/"
         }
     },
+    "scripts": {
+        "test": "php test"
+    },
     "require": {}
 }
