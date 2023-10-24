@@ -11,8 +11,4 @@ RUN apt-get update && apt-get install -y git
 
 COPY . .
 
-ENV COMPOSER_ALLOW_SUPERUSER 1
-
-RUN composer config github-oauth.github.com GITHUB_TOKEN
-
-RUN composer install --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+RUN composer install

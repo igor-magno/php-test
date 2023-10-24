@@ -7,5 +7,3 @@ services:
       context: .
     volumes:
       - .:/var/www/html
-    env_file:
-      - .env

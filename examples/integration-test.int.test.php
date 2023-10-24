@@ -1,11 +1,11 @@
 <?php
 
-use ERP\Test;
+use PHPTest\Test;
 
-use function ERP\assertEquals;
-use function ERP\assertStrict;
-use function ERP\describe;
-use function ERP\it;
+use function PHPTest\assertEquals;
+use function PHPTest\assertStrict;
+use function PHPTest\describe;
+use function PHPTest\it;
 
 Test::register();
 
@@ -16,7 +16,5 @@ describe('Integration Test', function () {
         assertEquals(true, 'true');
 
         assertStrict(true, true);
-
     });
-
 });
