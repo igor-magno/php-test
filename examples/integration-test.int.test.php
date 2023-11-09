@@ -1,11 +1,11 @@
 <?php
 
-use PHPTest\Test;
+use PHPTestGroups\Test;
 
-use function PHPTest\assertEquals;
-use function PHPTest\assertStrict;
-use function PHPTest\describe;
-use function PHPTest\it;
+use function PHPTestGroups\assertEquals;
+use function PHPTestGroups\assertStrict;
+use function PHPTestGroups\describe;
+use function PHPTestGroups\it;
 
 Test::register();
 

@@ -1,13 +1,13 @@
 <?php
 
-use ERP\Test;
+use PHPTestGroups\Test;
 
-$autoload = __DIR__ .'/vendor/autoload.php';
+$autoload = __DIR__ . '/../vendor/autoload.php';
 
 if (file_exists($autoload)) {
     require $autoload;
 } else {
-    require __DIR__ .'/../../autoload.php';
+    require __DIR__ . '/../../../autoload.php';
 }
 
 $listFilesByExtension = function ($directory, $extension) {

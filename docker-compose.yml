@@ -7,3 +7,5 @@ services:
       context: .
     volumes:
       - .:/var/www/html
+    ports:
+      - 8888:80

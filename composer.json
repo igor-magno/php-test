@@ -1,7 +1,7 @@
 {
-    "name": "php/test",
+    "name": "php-test-groups/test",
     "type": "library",
-    "description": "A Biblioteca Test é uma ferramenta que facilita a criação de testes automatizados em PHP. Ela permite identificar e agrupar testes com base em subextensões de arquivos e oferece métodos para escrever e executar testes.",
+    "description": "",
     "authors": [
         {
             "name": "igor-magno",
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PHPTest\\": "src/"
+            "PHPTestGroups\\": "src/"
         }
     },
     "scripts": {
