@@ -1,31 +1,32 @@
-## Test
+## PHP Test Groups
 
-A Biblioteca Test é uma ferramenta poderosa para escrever e executar testes automatizados em PHP. Com a capacidade de agrupar testes por subextensões de arquivos e uma variedade de métodos de asserção, você pode garantir a qualidade do seu código de maneira eficaz.
-
-Lembre-se de consultar a documentação oficial da Biblioteca Test para obter mais detalhes sobre seus recursos e opções avançadas.
+A biblioteca PHP Test Groups e uma biblioteca desenvolvida para atender os requisitos de teste agrupados.
 
 ### Documentação
 
-A Biblioteca Test é uma ferramenta que facilita a criação de testes automatizados em PHP. Ela permite identificar e agrupar testes com base em subextensões de arquivos e oferece métodos para escrever e executar testes. Neste guia, você aprenderá como usar a Biblioteca Test para escrever testes eficazes em seus projetos PHP.
+Assim como sua implementação, seu uso e simples.
 
 #### Instalação
-Para começar a usar a Biblioteca Test, você precisa instalá-la em seu projeto PHP. Você pode fazer isso usando o Composer:
+
+Você pode instalar a biblioteca via composer:
 
 ```
-
+Ainda não temos uma versão estável!
 ```
+Caso você não utilize o Composer no seu projeto você copiar o arquivo php-test-groups.php da pasta dist/ para raiz do seu projeto,
+nesse caso para escrever os testes será necessário realizar o require do arquivo  php-test-groups.php nos mesmos.
 
 #### Uso Básico
 
 Identificação de Arquivos de Teste
-A Biblioteca Test identifica arquivos de teste com base na subextensão .test. Por exemplo, se você tiver um arquivo chamado unitary-test.uni.test.php, ele será considerado parte do grupo de testes unitários.
+A Biblioteca PHP Test Groups identifica arquivos de teste com base na subextensão .test. Por exemplo, se você tiver um arquivo chamado unitary-test.uni.test.php, ele será considerado parte do grupo de testes uni que é a abreviação de unitários.
 
 #### Executando Testes
 
 Para executar todos os testes, você pode usar o seguinte comando:
 
 ```
-php test
+php ./bin/php-test-groups
 
 ```
 
@@ -33,13 +34,13 @@ Para executar apenas um grupo específico de testes, como os testes unitários, 
 
 ```
 
-php test uni
+php ./bin/php-test-groups uni
 
 ```
 
 #### Métodos Principais
 
-A Biblioteca Test oferece os seguintes métodos principais para escrever testes:
+A Biblioteca PHP Test Groups oferece os seguintes métodos principais para escrever testes:
 
 describe($description, $callback)
 O método describe é usado para descrever um grupo de testes e é geralmente usado para agrupar testes relacionados. Exemplo:
